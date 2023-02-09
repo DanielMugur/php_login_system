@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script src="https://kit.fontawesome.com/48bec18f09.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="portafolio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="logo"><a href="../home.php">Go back</a></h1>
+    </header>
+    <!--Contenido del portofolio-->
+		<div class="contenedor">
+            <section class="header">
+                <div class="logo">
+                    <h1>Daniel Mugur</h1>
+                    <p>Desarrollador Web</p>
+                </div>
+                <form action="">
+                    <input type="text" class="barra_nav" id="barra_nav" placeholder="Search">
+                </form>
+                <div class="categorias" id="categorias">
+                    <a href="#" class="activo">Todos</a>
+                    <a href="#">Naturaleza</a>
+                    <a href="#">Ciudades</a>
+                    <a href="#">Personas</a>
+                    <a href="#">Animales</a>
+                </div>
+            </section>
+            <!--Grid y las imagenes-->
+            <section class="grid" id="grid">
+                <div class="item"
+                     data-categoria="ciudades" data-etiquetas="ciudades autos calles"
+                     data-descripcion="1.- Lorem ipsum"
+                >
+                    <div class="item_contenido">
+                        <img src="img/ciudad1.png" alt="">
+                    </div>
+                </div>
+
+                <div class="item"
+                     data-categoria="personas"  data-etiquetas="peronas mujeres"
+                     data-descripcion="2.- Lorem ipsum"
+                >
+                    <div class="item_contenido">
+                        <img src="img/persona1.png" alt="">
+                    </div>
+                </div>
+
+                <div class="item"
+                     data-categoria="ciudades"  data-etiquetas="ciudades edificios paisajes"
+                     data-descripcion="3.- Lorem ipsum"
+                >
+                    <div class="item_contenido">
+                        <img src="img/ciudad2.png" alt="">
+                    </div>
+                </div>
+
+                <div class="item"
+                     data-categoria="animales"  data-etiquetas="leon animales"
+                     data-descripcion="4.- Lorem ipsum"
+                >
+                    <div class="item_contenido">
+                        <img src="img/animal1.png" alt="">
+                    </div>
+                </div>
+
+                <div class="item"
+                     data-categoria="naturaleza"  data-etiquetas="hojas naturaleza plantas"
+                     data-descripcion="5.- Lorem ipsum"
+                >
+                    <div class="item_contenido">
+                        <img src="img/naturaleza1.png" alt="">
+                    </div>
+                </div>
+
+                <div class="item"
+                     data-categoria="naturaleza"  data-etiquetas="paisajes montañas playas naturaleza"
+                     data-descripcion="6.- Lorem ipsum"
+                >
+                    <div class="item_contenido">
+                        <img src="img/paisaje1.png" alt="">
+                    </div>
+                </div>
+
+                <div class="item"
+                     data-categoria="naturaleza"  data-etiquetas="paisajes montañas naturaleza nubes"
+                     data-descripcion="7.- Lorem ipsum"
+                >
+                    <div class="item_contenido">
+                        <img src="img/paisaje2.png" alt="">
+                    </div>
+                </div>
+
+                <div class="item"
+                     data-categoria="personas"  data-etiquetas="peronas mujeres pelirrojas"
+                     data-descripcion="8.- Lorem ipsum"
+                >
+                    <div class="item_contenido">
+                        <img src="img/persona2.png" alt="">
+                    </div>
+                </div>
+
+                <div class="item"
+                     data-categoria="animales"  data-etiquetas="animales oso panda"
+                     data-descripcion="9.- Lorem ipsum"
+                >
+                    <div class="item_contenido">
+                        <img src="img/animal2.png" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <section class="overlay" id="overlay">
+                <div class="contenedor-img">
+                    <button id="btn-cerrar-popup"><i class="fas fa-times"></i></button>
+                    <img src="" alt="">
+                </div>
+                <p class="descripcion"></p>
+            </section>
+        </div>
+
+	<script src="https://unpkg.com/web-animations-js@2.3.2/web-animations.min.js"></script>
+	<script src="https://unpkg.com/muuri@0.8.0/dist/muuri.min.js"></script>
+    <script src="portafolio.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/muuri@0.9.3/dist/muuri.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js"></script>
+
+    <script type="text/javascript">
+        window.addEventListener("scroll", function(){
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+    </script>
+</body>
+</html>
